@@ -2,7 +2,7 @@
   font-family: 'Open Sans';
   src: url('fonts/OpenSans-Regular.ttf');
 }
-@@font-face {
+@font-face {
   font-family: 'Open Sans-Semibold';
   src: url('fonts/OpenSans-Semibold.ttf');
 }
@@ -40,7 +40,6 @@ body{
 }
 .bar__div_box{
   margin-left: 40px;
-  /* text-align: right; */
   height: 17px;
   width: 17px;
   border: 1px solid #687599;
@@ -125,7 +124,6 @@ body{
   margin-bottom: 5px;
   margin-top: 5px;
 }
-
 .header{
   position: relative;
   margin-left: 200px;
@@ -143,16 +141,17 @@ body{
   margin-top: 20px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
   background-color: #ffffff;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .search__input{
   margin-left: 7px;
-  border: 0;
-  opacity: 0.7;
+  border: 1px solid silver;
+  border-radius: 2px;
+  opacity: 0.6;
   width: auto;
 }
 INPUT.search:focus{
-  border: 1px solid #00b5f9;
+  border: 1px groove #00b5f9;
 }
 .header__author{
   margin-top: 20px;
@@ -188,7 +187,6 @@ INPUT.search:focus{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: center;
 }
 .main__photo{
   display: flex;
@@ -197,10 +195,10 @@ INPUT.search:focus{
   align-items: center;
 }
 .main__photo_margin{
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .main__button_position{
-  text-align: right;
+  text-align: center;
   color: #697a94;
   font-family: "Open Sans-Semibold";
   font-size: 12px;
@@ -218,7 +216,9 @@ INPUT.search:focus{
   border-radius: 3px;
   background: #ffffff;
   padding: 5px;
-  }
+  width: auto;
+  height: 14px;
+}
 .main__button:active {
   box-shadow:
    inset 0 1px 3px rgba(0,10,20,.5),
@@ -282,10 +282,8 @@ INPUT.search:focus{
   opacity: 1;
 }
 .block_hover{
-  display: block;
+  display: flex;
   position: relative;
-  left: 0;
-  top: 0;
   background-color: #141415;
   margin: 10px 17px 4px 10px;
   width: 164px;
@@ -294,11 +292,10 @@ INPUT.search:focus{
 }
 .block_hover_circle{
   display: flex;
-  position: absolute;
+  position: relative;
   width: 30px;
   height: 30px;
   border-radius: 30px;
-  /* border: 1px groove #00b5f9; */
   border: 1px groove #0084f9;
   margin: 10px 0px 0px 124px;
   text-align: right;
@@ -309,7 +306,6 @@ INPUT.search:focus{
 }
 .block_hover_circle:before{
   content:'\2714';
-  /* color: #00b5f9; */
   color:#0084f9;
   opacity: 1;
   z-index: 2;
