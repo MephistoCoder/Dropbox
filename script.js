@@ -1,9 +1,15 @@
 
 var img = [...document.getElementsByClassName('main__gallery_img')];
-console.log(img);
-img.forEach(function(item) {
-  item.onclick = ()=> toggle(item);
+var block = [...document.getElementsByClassName('block_hover_circle')]
+img.forEach(function(item, i) {
+  item.onclick = ()=> {
+    togle(item);
+    show(block[i]);
+  }
 });
-  function toggle(el) {
+  function togle(el) {
    el.style.opacity = (el.style.opacity == 1) ? 0.6 : 1;
+}
+function show(el) {
+  el.style.opacity = (el.style.opacity == 0) ? 1 : 0;
 }
